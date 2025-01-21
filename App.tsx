@@ -15,7 +15,8 @@ export default function App() {
 
       {/* Scrolling header part. Havent gotten to it yet*/}
       <View style={styles.navBar}>
-      <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/512/54/54878.png' }} style={styles.listIcon} />
+        <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/512/54/54878.png' }} style={styles.listIcon} />
+        <Text style={styles.navLine}></Text>
         <Text style={styles.navItem}>Buy 1,...</Text>
         <Text style={[styles.navItem, styles.currentPage]}>Most ...</Text>
         <Text style={styles.navItem}>Bundl...</Text>
@@ -161,14 +162,13 @@ const styles = StyleSheet.create({
     color: 'grey',
     textAlign: 'center',
     fontWeight: '600',
-    borderBlockColor: '#f4f4f4',
-    borderBottomWidth: 5,
     width: 120,
     paddingBottom: 15,
   },
   currentPage: {
     color: 'black',
     borderBlockColor: 'black',
+    borderBottomWidth: 5,
   },
   listIcon:{
     width: 20,
@@ -176,4 +176,11 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginBottom: 15,
   },
+  navLine:{
+    borderBlockColor: '#f4f4f4',
+    borderBottomWidth: 5,
+    position: 'absolute',
+    top: 45,
+    width: 390,
+  }
 });
