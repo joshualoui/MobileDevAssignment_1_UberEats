@@ -14,10 +14,11 @@ export default function App() {
       </View>
 
       {/* Scrolling header part. Havent gotten to it yet*/}
-      <View>
-        <Text>Buy 1.... Most.... Bundle...</Text>
-        <Text>Get 1 Free</Text>
-        <Text>Testing the text </Text>
+      <View style={styles.navBar}>
+      <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/512/54/54878.png' }} style={styles.listIcon} />
+        <Text style={styles.navItem}>Buy 1,...</Text>
+        <Text style={[styles.navItem, styles.currentPage]}>Most ...</Text>
+        <Text style={styles.navItem}>Bundl...</Text>
       </View>
 
       {/* Main body container? (Most Popular and down)*/}
@@ -86,15 +87,12 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: 10,
+    paddingTop: 40,
   },
   topContainer: {
-    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    paddingTop: 20,
-    paddingLeft: 20,
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   title: {
     fontSize: 24,
@@ -107,14 +105,17 @@ const styles = StyleSheet.create({
     paddingTop: 15,
   },
   arrow: {
-    fontSize: 40,
+    fontSize: 20,
     fontWeight: 'bold',
-    paddingRight: 30,
+    marginLeft: 20,
+    marginTop: 15,
+    paddingRight: 10,
   },
   search:{
     fontSize: 20,
     paddingLeft: 120,
     paddingTop: 15,
+    marginRight: 20,
   },
   image:{
     width: 120,
@@ -148,5 +149,31 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
     textAlign: 'center',
+  },
+  navBar:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 5,  
+    paddingTop: 30,
+  },
+  navItem:{
+    color: 'grey',
+    textAlign: 'center',
+    fontWeight: '600',
+    borderBlockColor: '#f4f4f4',
+    borderBottomWidth: 5,
+    width: 120,
+    paddingBottom: 15,
+  },
+  currentPage: {
+    color: 'black',
+    borderBlockColor: 'black',
+  },
+  listIcon:{
+    width: 20,
+    height: 20,
+    marginLeft: 10,
+    marginBottom: 15,
   },
 });
