@@ -65,9 +65,18 @@ export default function App() {
         </View>
         <View style={styles.imageRow}>
           <Image source={{ uri: 'https://s7d1.scene7.com/is/image/mcdonalds/DC_202101_0114_EVM_L_SpicyCrispyChickenSandwich_PotatoBun_832x472:product-header-desktop?wid=830&hei=456&dpr=off' }} style={styles.image} />
-          </View>
+        </View>
         
       </View>
+
+      {/* Uber One Free Trial Tab */}
+      <View style={styles.rowSeperator}>
+        <View style={styles.uberOneView}>
+          <TouchableOpacity style={styles.checkBox} onPress={() => {alert("Try Uber One\n5 months free")}}></TouchableOpacity>
+          <Text style={styles.uberOneText}>Get <Text style={styles.uberOneSpecialText}>$0 Delivery Fee</Text> and 5% off with a free trial of Uber One</Text>
+        </View>    
+      </View>
+
     </View>
     
   {/* Alert button */}
@@ -148,5 +157,23 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
     textAlign: 'center',
+  },
+  uberOneText: {
+    paddingRight: 160,
+  },
+  uberOneSpecialText: {
+    color: '#daa520',
+  },
+  uberOneView: {
+    flexDirection: 'row',
+    margin: 0,
+    alignItems: 'center',
+  }, 
+  checkBox: {
+    borderColor: 'black',
+    borderWidth: 2,
+    height: 15,
+    width: 15,
+    margin: 28,
   },
 });
