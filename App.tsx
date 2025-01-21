@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Alert } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
@@ -68,8 +69,16 @@ export default function App() {
         
       </View>
     </View>
+    
+  {/* Alert button */}
+  <View>
+    <TouchableOpacity onPress={() => {alert("Alert Button pressed");
+    }}
+    >
+      <Text style={styles.alertText}>Alert</Text>
+    </TouchableOpacity>
   </View>
-
+  </View>
   );
 }
 
@@ -133,5 +142,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  alertText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'red',
+    textAlign: 'center',
   },
 });
