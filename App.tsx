@@ -69,7 +69,8 @@ export default function App() {
         
       </View>
     </View>
-  // Alert button
+    
+  {/* Alert button */}
   <View>
     <TouchableOpacity onPress={() => {alert("Alert Button pressed");
     }}
@@ -77,10 +78,7 @@ export default function App() {
       <Text style={styles.alertText}>Alert</Text>
     </TouchableOpacity>
   </View>
-
   </View>
-
-
   );
 }
 
