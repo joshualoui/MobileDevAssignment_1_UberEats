@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 45,
     width: 390,
-  }
+  },
   uberOneText: {
     paddingRight: 160,
   },
